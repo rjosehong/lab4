@@ -1,31 +1,18 @@
-public class Contenido{
-    private String tipo_contenido;
-    private String contenido;
-    private String categoria;
-    private String nombre;
+public abstract class Contenido {
+    protected String nombre;
+    protected String categoria;
+    protected String autor;
 
-    public Contenido(String tipo_contenido, String contenido, String categoria, String nombre){
-        this.tipo_contenido=tipo_contenido;
-        this.contenido=contenido;
-        this.categoria=categoria;
-        this.nombre=nombre;
+    public Contenido(String nombre, String categoria, String autor) {
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.autor = autor;
     }
 
-    public String getTipo_contenido() {
-        return tipo_contenido;
-    }
+    public String getNombre() { return nombre; }
+    public String getCategoria() { return categoria; }
+    public String getAutor() { return autor; }
 
-    public String getContenido() {
-        return contenido;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-    
-    public String getNombre() {
-        return nombre;
-    }
-
-    
+    public abstract void publicar();  // método polimórfico
 }
+

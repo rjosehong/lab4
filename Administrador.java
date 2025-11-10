@@ -1,3 +1,6 @@
 public interface Administrador {
-    void Admin();
+    void crearContenido();
+    void editarContenido();
+    void eliminarContenido();
 }
+
